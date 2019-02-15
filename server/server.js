@@ -4,12 +4,12 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 
 // User
-const users = require("./User/routes/api/users");
-const profile = require("./User/routes/api/profile");
-const posts = require("./User/routes/api/posts");
+const users = require("../server/User/routes/api/users");
+const profile = require("../server/User/routes/api/profile");
+const posts = require("../server/User/routes/api/posts");
 
 // Brand
-const brands = require("./Brand/routes/api/brands");
+const brands = require("../server/Brand/routes/api/brands");
 // const profile = require("./User/routes/api/profile");
 
 const app = express();
