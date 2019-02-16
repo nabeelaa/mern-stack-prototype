@@ -5,12 +5,12 @@ const passport = require("passport");
 const path = require("path");
 
 // User
-const users = require("../server/User/routes/api/users");
-const profile = require("../server/User/routes/api/profile");
-const posts = require("../server/User/routes/api/posts");
+const users = require("./server/User/routes/api/users");
+const profile = require("./server/User/routes/api/profile");
+const posts = require("./server/User/routes/api/posts");
 
 // Brand
-const brands = require("../server/Brand/routes/api/brands");
+const brands = require("./server/Brand/routes/api/brands");
 // const profile = require("./User/routes/api/profile");
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // DB Config
-const db = require("./config/keys").mongoURI;
+const db = require("./server/config/keys").mongoURI;
 
 // connect to MongoDB
 mongoose
@@ -34,7 +34,7 @@ mongoose
 app.use(passport.initialize());
 
 // Passport Config
-require("./config/passport")(passport);
+require("./server/config/passport")(passport);
 
 // User Routes
 app.use("/api/users", users);
