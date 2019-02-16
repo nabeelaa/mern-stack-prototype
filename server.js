@@ -47,7 +47,8 @@ app.use("/api/brands", brands);
 // Server static assests if in production
 
 if (process.env.NODE_ENV === "production") {
-  // Set static folder
+  // Set static folderr
+
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
