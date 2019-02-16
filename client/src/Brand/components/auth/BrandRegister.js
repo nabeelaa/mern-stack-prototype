@@ -46,62 +46,78 @@ class BrandRegister extends Component {
   render() {
     return (
       <div>
-        <div className="register">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 m-auto">
-                <h2 className="heading text-center">Sign Up</h2>
-                <p className="lead text-center">
-                  Already have a <b>Hubit</b> account?{" "}
-                  <Link to="/brands/login">Login</Link>
-                </p>
-                <form onSubmit={this.onSubmit}>
-                  <div className="form-row">
-                    <div className="form-group col">
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        placeholder="Name"
-                        name="name"
-                        value={this.state.name}
-                        onChange={this.onChange}
-                        required
-                      />
-                    </div>
-                    <div className="form-group col">
-                      <input
-                        type="text"
-                        className="form-control form-control-sm"
-                        placeholder="Occupation"
-                        name="occupation"
-                        value={this.state.occupation}
-                        onChange={this.onChange}
-                        required
-                      />
-                    </div>
-                  </div>
+        <div className="row">
+          <div className="landing">
+            <div className="dark-overlay landing-inner text-light">
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-8  m-auto">
+                    <h1 className="display-5 mb-4 text-center">
+                      Welcome Brands!
+                    </h1>
+                    <p className="lead text-center">
+                      {" "}
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      tempor incididunt.
+                    </p>
 
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      className="form-control form-control-sm"
-                      placeholder="Email Address"
-                      name="email"
-                      value={this.state.email}
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="password"
-                      className="form-control form-control-sm"
-                      placeholder="Password"
-                      name="password"
-                      value={this.state.password}
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  {/* <div className="form-group">
+                    <div className="form-container">
+                      <div className="register">
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-md-12 m-auto">
+                              <h2 className="heading text-center">Sign Up</h2>
+                              <p className="lead text-center">
+                                Already have a <b>Hubit</b> account?{" "}
+                                <Link to="/brands/login">Login</Link>
+                              </p>
+                              <form onSubmit={this.onSubmit}>
+                                <div className="form-row">
+                                  <div className="form-group col">
+                                    <input
+                                      type="text"
+                                      className="form-control form-control-sm"
+                                      placeholder="Name"
+                                      name="name"
+                                      value={this.state.name}
+                                      onChange={this.onChange}
+                                      required
+                                    />
+                                  </div>
+                                  <div className="form-group col">
+                                    <input
+                                      type="text"
+                                      className="form-control form-control-sm"
+                                      placeholder="Occupation"
+                                      name="occupation"
+                                      value={this.state.occupation}
+                                      onChange={this.onChange}
+                                      required
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="form-group">
+                                  <input
+                                    type="email"
+                                    className="form-control form-control-sm"
+                                    placeholder="Email Address"
+                                    name="email"
+                                    value={this.state.email}
+                                    onChange={this.onChange}
+                                  />
+                                </div>
+                                <div className="form-group">
+                                  <input
+                                    type="password"
+                                    className="form-control form-control-sm"
+                                    placeholder="Password"
+                                    name="password"
+                                    value={this.state.password}
+                                    onChange={this.onChange}
+                                  />
+                                </div>
+                                {/* <div className="form-group">
                     <input
                       type="password"
                       className="form-control form-control-sm"
@@ -109,62 +125,69 @@ class BrandRegister extends Component {
                       name="password2"
                     />
                   </div> */}
-                  <div className="form-group">
-                    <input
-                      className="form-control form-control-sm"
-                      type="tel"
-                      placeholder="Phone: 1-(555)-555-5555"
-                      name="phone"
-                      value={this.state.phone}
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    {/* <label htmlFor="organization">Organization</label> */}
+                                <div className="form-group">
+                                  <input
+                                    className="form-control form-control-sm"
+                                    type="tel"
+                                    placeholder="Phone: 1-(555)-555-5555"
+                                    name="phone"
+                                    value={this.state.phone}
+                                    onChange={this.onChange}
+                                  />
+                                </div>
+                                <div className="form-group">
+                                  {/* <label htmlFor="organization">Organization</label> */}
 
-                    <input
-                      className="form-control form-control-sm"
-                      type="text"
-                      name="organization"
-                      placeholder="Organization"
-                      value={this.state.organization}
-                      onChange={this.onChange}
-                    />
-                  </div>
+                                  <input
+                                    className="form-control form-control-sm"
+                                    type="text"
+                                    name="organization"
+                                    placeholder="Organization"
+                                    value={this.state.organization}
+                                    onChange={this.onChange}
+                                  />
+                                </div>
 
-                  <div className="form-group">
-                    {/* <label htmlFor="address">Address</label> */}
+                                <div className="form-group">
+                                  {/* <label htmlFor="address">Address</label> */}
 
-                    <input
-                      className="form-control form-control-sm"
-                      type="text"
-                      name="address"
-                      placeholder="Address"
-                      value={this.state.address}
-                      onChange={this.onChange}
-                    />
-                  </div>
+                                  <input
+                                    className="form-control form-control-sm"
+                                    type="text"
+                                    name="address"
+                                    placeholder="Address"
+                                    value={this.state.address}
+                                    onChange={this.onChange}
+                                  />
+                                </div>
 
-                  <div className="form-group">
-                    {/* <label htmlFor="address">
+                                <div className="form-group">
+                                  {/* <label htmlFor="address">
                       What would you like to accomplish?
                     </label> */}
 
-                    <input
-                      className="form-control form-control-sm"
-                      type="textarea"
-                      name="accomplish"
-                      placeholder="What would you like to accomplish?"
-                      value={this.state.accomplish}
-                      onChange={this.onChange}
-                    />
-                  </div>
+                                  <input
+                                    className="form-control form-control-sm"
+                                    type="textarea"
+                                    name="accomplish"
+                                    placeholder="What would you like to accomplish?"
+                                    value={this.state.accomplish}
+                                    onChange={this.onChange}
+                                  />
+                                </div>
 
-                  <input
-                    type="submit"
-                    className="btn btn-info btn-block mt-4"
-                  />
-                </form>
+                                <input
+                                  type="submit"
+                                  className="btn btn-info btn-block mt-4"
+                                />
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ class Navbar extends Component {
     window.location.reload();
   };
   render() {
-    const { isAuthenticated, user } = this.props.auth;
+    const { isAuthenticated } = this.props.auth;
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
@@ -28,7 +28,7 @@ class Navbar extends Component {
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link className="nav-link" to="/brands/landing">
+          <Link className="nav-link" to="/brands/register">
             {" "}
             Brands
           </Link>

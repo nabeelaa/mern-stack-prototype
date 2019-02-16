@@ -9,14 +9,15 @@ import store from "./store";
 
 import Navbar from "./User/components/layout/Navbar";
 import Footer from "./User/components/layout/Footer";
-import Landing from "./User/components/layout/Landing";
+// import Landing from "./User/components/layout/Landing";
 import Login from "./User/components/auth/Login";
 import Register from "./User/components/auth/Register";
 import Home from "./User/components/home/Home";
 
-import BrandLanding from "./Brand/components/layout/BrandLanding";
+// import BrandLanding from "./Brand/components/layout/BrandLanding";
 import BrandRegister from "./Brand/components/auth/BrandRegister";
 import BrandLogin from "./Brand/components/auth/BrandLogin";
+import BrandHome from "./Brand/components/brandHome/BrandHome";
 
 import "./App.css";
 
@@ -33,8 +34,6 @@ if (localStorage.jwtToken) {
   if (decoded.exp < currentTime) {
     // Logout user
     store.dispatch(logoutUser());
-    // Clear current Profile
-    // store.dispatch(clearCurrentProfile());
     // Redirect to login
     window.location.href = "/login";
   }
@@ -62,9 +61,10 @@ class App extends Component {
             <Route path="/register" component={Register} />
             <Route path="/home" component={Home} />
 
+            {/* <Route path="/brands" component={BrandLanding} /> */}
             <Route path="/brands/register" component={BrandRegister} />
             <Route path="/brands/login" component={BrandLogin} />
-            <Route path="/brands" component={BrandLanding} />
+            <Route path="/brands/brandHome" component={BrandHome} />
 
             <Footer />
           </div>
