@@ -34,11 +34,11 @@ img {
   background-color: white;
   color: black;
   padding: 8px;
-  margin-left: 20px;
-  margin-right: 20px;
   height: 100%;
   padding-top: 10px;
   border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .register {
