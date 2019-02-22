@@ -105,6 +105,7 @@ class BrandRegister extends Component {
                                     name="email"
                                     value={this.state.email}
                                     onChange={this.onChange}
+                                    required
                                   />
                                 </div>
                                 <div className="form-group">
@@ -115,6 +116,7 @@ class BrandRegister extends Component {
                                     name="password"
                                     value={this.state.password}
                                     onChange={this.onChange}
+                                    required
                                   />
                                 </div>
                                 {/* <div className="form-group">
@@ -133,6 +135,7 @@ class BrandRegister extends Component {
                                     name="phone"
                                     value={this.state.phone}
                                     onChange={this.onChange}
+                                    required
                                   />
                                 </div>
                                 <div className="form-group">
@@ -145,6 +148,7 @@ class BrandRegister extends Component {
                                     placeholder="Organization"
                                     value={this.state.organization}
                                     onChange={this.onChange}
+                                    required
                                   />
                                 </div>
 
@@ -158,6 +162,7 @@ class BrandRegister extends Component {
                                     placeholder="Address"
                                     value={this.state.address}
                                     onChange={this.onChange}
+                                    required
                                   />
                                 </div>
 
@@ -173,6 +178,7 @@ class BrandRegister extends Component {
                                     placeholder="What would you like to accomplish?"
                                     value={this.state.accomplish}
                                     onChange={this.onChange}
+                                    required
                                   />
                                 </div>
 

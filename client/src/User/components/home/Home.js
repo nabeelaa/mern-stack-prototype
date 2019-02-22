@@ -88,8 +88,64 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-
             <hr />
+
+            <p className="lead text-center">
+              {" "}
+              Select which brand’s content marketing campaign you’d like to
+              Hubit! <br />
+              You have 1 hour to complete but can exit at anytime, your work
+              will be saved.
+            </p>
+
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                  <div class="title">
+                    <h4>Nike</h4>
+                  </div>
+
+                  <div class="text">
+                    <span>
+                      Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.
+                      Assum decore te sed. Elitr scripta ocurreret qui ad.
+                    </span>
+                  </div>
+
+                  <a href="#">Evaluate for 10$</a>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                  <div class="title">
+                    <h4>Starbucks</h4>
+                  </div>
+                  <div class="text">
+                    <span>
+                      Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.
+                      Assum decore te sed. Elitr scripta ocurreret qui ad.
+                    </span>
+                  </div>
+
+                  <a href="#">Evaluate for 10$</a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                  <div class="title">
+                    <h4>El Pollo Loco</h4>
+                  </div>
+                  <div class="text">
+                    <span>
+                      Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.
+                      Assum decore te sed. Elitr scripta ocurreret qui ad.
+                    </span>
+                  </div>
+                  <a href="#">Evaluate for 10$</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

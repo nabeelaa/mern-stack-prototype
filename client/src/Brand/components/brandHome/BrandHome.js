@@ -17,8 +17,24 @@ class BrandHome extends Component {
       <div>
         <div className="container">
           <div className="jumbotron">
-            <h1>Home</h1>
-            <p>Welcome</p>
+            <p className="lead text-center">
+              {" "}
+              <b>
+                Welcome to the place where you can upload your content for your
+                content marketing campaign!
+              </b>
+              <br />
+              <br />
+              Upload your images and allow your users to swipe away. Content
+              uploads are broken down into 5 sections with 5 slots for content
+              in the form of A/B testing. Data will be collected through these
+              categories
+            </p>
+            <div className="row">
+              <div class="col text-center">
+                <button class="btn btn-success ml-auto">Create Campaign</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
