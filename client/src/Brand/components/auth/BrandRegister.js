@@ -55,11 +55,11 @@ class BrandRegister extends Component {
                     <h1 className="display-5 mb-4 text-center">
                       Welcome Brands!
                     </h1>
-                    <p className="lead text-center">
+                    {/* <p className="lead text-center">
                       {" "}
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       tempor incididunt.
-                    </p>
+                    </p> */}
 
                     <div className="form-container">
                       <div className="register">
