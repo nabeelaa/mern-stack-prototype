@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { registerBrand } from "../../../actions/authActions";
+import { registerBrand } from "../../../_actions/authActions";
 
 class BrandRegister extends Component {
   constructor() {

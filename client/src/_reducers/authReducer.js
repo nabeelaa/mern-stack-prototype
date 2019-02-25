@@ -1,7 +1,6 @@
-import isEmpty from "../validation/is-empty";
-
-import { SET_CURRENT_USER } from "../actions/types";
-import { SET_CURRENT_BRANDUSER } from "../actions/types";
+import isEmpty from "../_validation/is-empty";
+import { SET_CURRENT_USER } from "../_actions/types";
+import { SET_CURRENT_BRANDUSER } from "../_actions/types";
 
 const initialState = {
   isAuthenticated: false,

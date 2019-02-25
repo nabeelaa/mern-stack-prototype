@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import jwt_decode from "jwt-decode";
-import setAuthToken from "./utils/setAuthToken";
-import { setCurrentUser, logoutUser } from "./actions/authActions";
-import { setCurrentBrandUser } from "./actions/authActions";
+import setAuthToken from "./_utils/setAuthToken";
+import { setCurrentUser, logoutUser } from "./_actions/authActions";
+import { setCurrentBrandUser } from "./_actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
-import Navbar from "./User/components/layout/Navbar";
-import Footer from "./User/components/layout/Footer";
-// import Landing from "./User/components/layout/Landing";
-import Login from "./User/components/auth/Login";
-import Register from "./User/components/auth/Register";
-import Home from "./User/components/home/Home";
+import Navbar from "./user/components/layout/Navbar";
+import Footer from "./user/components/layout/Footer";
+// import Landing from "./user/components/layout/Landing";
+import Login from "./user/components/auth/Login";
+import Register from "./user/components/auth/Register";
+import Home from "./user/components/home/Home";
 
-// import BrandLanding from "./Brand/components/layout/BrandLanding";
-import BrandRegister from "./Brand/components/auth/BrandRegister";
-import BrandLogin from "./Brand/components/auth/BrandLogin";
-import BrandHome from "./Brand/components/brandHome/BrandHome";
+// import BrandLanding from "./brand/components/layout/BrandLanding";
+import BrandRegister from "./brand/components/auth/BrandRegister";
+import BrandLogin from "./brand/components/auth/BrandLogin";
+import BrandHome from "./brand/components/brandHome/BrandHome";
 
 import "./App.css";
 

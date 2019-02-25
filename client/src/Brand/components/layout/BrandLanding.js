@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { BrowserRouter as Router, Route, HashRouter } from "react-router-dom";
 import BrandLogin from "../auth/BrandLogin";
 import BrandRegister from "../auth/BrandRegister";
