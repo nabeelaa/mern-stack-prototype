@@ -10,6 +10,7 @@ import store from "./store";
 import Navbar from "./user/components/layout/Navbar";
 import Footer from "./user/components/layout/Footer";
 // import Landing from "./user/components/layout/Landing";
+
 import Login from "./user/components/auth/Login";
 import Register from "./user/components/auth/Register";
 import Home from "./user/components/home/Home";
@@ -20,6 +21,7 @@ import BrandLogin from "./brand/components/auth/BrandLogin";
 import BrandHome from "./brand/components/brandHome/BrandHome";
 
 import "./App.css";
+
 //Check for token
 if (localStorage.jwtToken) {
   // Set auth token header auth
