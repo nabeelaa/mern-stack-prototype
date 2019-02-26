@@ -20,7 +20,6 @@ import BrandLogin from "./brand/components/auth/BrandLogin";
 import BrandHome from "./brand/components/brandHome/BrandHome";
 
 import "./App.css";
-
 //Check for token
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -39,12 +38,12 @@ if (localStorage.jwtToken) {
   }
 }
 
-//Check for token
+//Check for Brand user token
 if (localStorage.jwtToken) {
   // Set auth token header auth
   setAuthToken(localStorage.jwtToken);
   const decoded = jwt_decode(localStorage.jwtToken);
-  // set user and is authenticates
+  // set user and is authenticated
   store.dispatch(setCurrentBrandUser(decoded));
 }
 
