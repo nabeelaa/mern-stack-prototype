@@ -63,7 +63,6 @@ export default class MediaModal extends Component {
             name: "fav_socialmedia",
             isRequired: true,
             title: "Rank your favorite social media platforms",
-            isRequired: true,
             choices: [
               "Facebook",
               "Instagram",
