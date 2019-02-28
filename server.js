@@ -6,7 +6,7 @@ const path = require("path");
 
 // User
 const users = require("./server/User/routes/api/users");
-const profile = require("./server/User/routes/api/profile");
+const mediaPersona = require("./server/User/routes/api/mediaPersona");
 const posts = require("./server/User/routes/api/posts");
 
 // Brand
@@ -38,7 +38,7 @@ require("./server/config/passport")(passport);
 
 // User Routes
 app.use("/api/users", users);
-app.use("/api/profile", profile);
+app.use("/api/mediaPersona", mediaPersona);
 app.use("/api/posts", posts);
 
 // Brand Routes
