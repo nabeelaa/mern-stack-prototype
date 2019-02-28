@@ -105,7 +105,7 @@ class Home extends Component {
                     </span>
                   </div>
 
-                  <a href="#">Evaluate for 10$</a>
+                  <span>Evaluate for 10$</span>
                 </div>
               </div>
 
@@ -121,7 +121,7 @@ class Home extends Component {
                     </span>
                   </div>
 
-                  <a href="#">Evaluate for 10$</a>
+                  <span>Evaluate for 10$</span>
                 </div>
               </div>
               <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -135,7 +135,7 @@ class Home extends Component {
                       Assum decore te sed. Elitr scripta ocurreret qui ad.
                     </span>
                   </div>
-                  <a href="#">Evaluate for 10$</a>
+                  <span>Evaluate for 10$</span>
                 </div>
               </div>
             </div>

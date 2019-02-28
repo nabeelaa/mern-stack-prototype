@@ -249,6 +249,7 @@ export default class EmotionModal extends Component {
         {" "}
         <Popup
           trigger={
+            // eslint-disable-next-line
             <a href="#" onClick="">
               <span />
             </a>

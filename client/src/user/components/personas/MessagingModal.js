@@ -58,7 +58,6 @@ export default class MessagingModal extends Component {
             name: "more_engaging_rank",
             isRequired: true,
             title: "Rank what is more engaging for you?",
-            isRequired: true,
             choices: [
               "Content",
               "infographics",
@@ -137,6 +136,7 @@ export default class MessagingModal extends Component {
         {" "}
         <Popup
           trigger={
+            // eslint-disable-next-line
             <a href="#" onClick="">
               <span />
             </a>
