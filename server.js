@@ -5,12 +5,12 @@ const passport = require("passport");
 const path = require("path");
 
 // User
-const users = require("./server/User/routes/api/users");
-const mediaPersona = require("./server/User/routes/api/mediaPersona");
-const posts = require("./server/User/routes/api/posts");
+const users = require("./server/user/routes/api/users");
+const mediaPersona = require("./server/user/routes/api/mediaPersona");
+const posts = require("./server/user/routes/api/posts");
 
 // Brand
-const brands = require("./server/Brand/routes/api/brands");
+const brands = require("./server/brand/routes/api/brands");
 // const profile = require("./User/routes/api/profile");
 
 const app = express();
