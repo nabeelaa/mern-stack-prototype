@@ -19,18 +19,25 @@ class Login extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   componentDidMount() {
-    if (this.props.auth.isAuthenticated) {
+    if (this.props.auth.isAuthenticatedUser) {
       this.props.history.push("/home");
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/home");
-    }
-
+  static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.errors) {
-      this.setState({ errors: nextProps.errors });
+      return { errors: nextProps.errors };
+    }
+    return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.errors !== this.props.errors) {
+      this.setState({ errors: this.props.errors });
+    }
+    if (this.props.auth.isAuthenticatedUser) {
+      this.setState({ isAuthenticated: this.props.auth.isAuthenticatedUser });
+      this.props.history.push("/home");
     }
   }
 

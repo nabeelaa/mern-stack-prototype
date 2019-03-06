@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./_utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./_actions/authActions";
 import { setCurrentBrandUser } from "./_actions/authActions";
+import { clearCurrentProfile } from "./_actions/profileActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -20,7 +21,10 @@ import BrandRegister from "./brand/components/auth/BrandRegister";
 import BrandLogin from "./brand/components/auth/BrandLogin";
 import BrandHome from "./brand/components/brandHome/BrandHome";
 
+import PrivateRoute from "./user/components/common/PrivateRoute";
+
 import "./App.css";
+import CreateProfile from "./user/components/create-profile/CreateProfile";
 
 //Check for token
 if (localStorage.jwtToken) {
@@ -35,6 +39,8 @@ if (localStorage.jwtToken) {
   if (decoded.exp < currentTime) {
     // Logout user
     store.dispatch(logoutUser());
+    // Clear current profile
+    store.dispatch(clearCurrentProfile());
     // Redirect to login
     window.location.href = "/login";
   }
@@ -60,7 +66,9 @@ class App extends Component {
 
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+
             <Route path="/home" component={Home} />
+            <Route path="/create-profile" component={CreateProfile} />
 
             {/* <Route path="/brands" component={BrandLanding} /> */}
             <Route path="/brands/register" component={BrandRegister} />

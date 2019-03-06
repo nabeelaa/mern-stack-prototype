@@ -20,7 +20,7 @@ class BrandLogin extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.auth.isAuthenticated) {
+    if (nextProps.auth.isAuthenticatedBrand) {
       this.props.history.push("/brands/brandHome");
     }
     if (nextProps.errors) {

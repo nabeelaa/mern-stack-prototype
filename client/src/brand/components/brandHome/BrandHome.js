@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 
 class BrandHome extends Component {
   componentDidMount() {
-    console.log(this.props.auth.isAuthenticated);
-    if (!this.props.auth.isAuthenticated) {
+    console.log(this.props.auth.isAuthenticatedBrand);
+    if (!this.props.auth.isAuthenticatedBrand) {
       this.props.history.push("/");
     }
   }

@@ -116,7 +116,18 @@ export default class MediaModal extends Component {
   //Define a callback methods on survey complete
   onComplete(survey, options) {
     //Write survey results into database
-    console.log("Survey results: " + JSON.stringify(survey.data));
+    const mediaModelQs = {
+      watch_content: survey.data.watch_content,
+      click_targeted_ad: survey.data.click_targeted_ad,
+      outdoor_ad: survey.data.outdoor_ad,
+      fav_socialmedia: survey.data.fav_socialmedia,
+      fav_ott: survey.data.fav_ott,
+      tv_sm: survey.data.tv_sm,
+      tuneout: survey.data.tuneout
+    };
+    console.log(
+      "Survey results: " + JSON.stringify(mediaModelQs.watch_content)
+    );
   }
 
   render() {

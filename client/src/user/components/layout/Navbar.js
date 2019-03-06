@@ -3,18 +3,35 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../_actions/authActions";
+import { clearCurrentProfile } from "../../../_actions/profileActions";
 
 class Navbar extends Component {
   onLogoutClick = e => {
     e.preventDefault();
-    // this.props.clearCurrentProfile();
+    this.props.clearCurrentProfile();
     this.props.logoutUser();
     window.location.reload();
   };
   render() {
-    const { isAuthenticated } = this.props.auth;
+    const { isAuthenticatedUser } = this.props.auth;
+    const { isAuthenticatedBrand } = this.props.auth;
 
-    const authLinks = (
+    const authLinksUser = (
+      <ul className="navbar-nav ml-auto">
+        <Link className="nav-link" to="/user/home">
+          {" "}
+          Profile
+        </Link>
+        <li className="nav-item">
+          <a href={this.href} onClick={this.onLogoutClick} className="nav-link">
+            {" "}
+            Logout
+          </a>
+        </li>
+      </ul>
+    );
+
+    const authLinksBrand = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <a href={this.href} onClick={this.onLogoutClick} className="nav-link">
@@ -56,7 +73,11 @@ class Navbar extends Component {
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item" />
               </ul>
-              {isAuthenticated ? authLinks : guestLinks}
+              {isAuthenticatedUser
+                ? authLinksUser
+                : isAuthenticatedBrand
+                ? authLinksBrand
+                : guestLinks}
             </div>
           </div>
         </nav>
@@ -76,5 +97,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { logoutUser }
+  { logoutUser, clearCurrentProfile }
 )(Navbar);

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const MediaPersonaSchema = new Schema({
   id: {
     type: String,
-    required: true
+    required: false
   },
   watch_content: {
     type: String,
@@ -24,7 +24,7 @@ const MediaPersonaSchema = new Schema({
     required: true
   },
   fav_ott: {
-    type: Date,
+    type: String,
     required: true
   },
   tv_sm: {
