@@ -3,14 +3,15 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import {
-  getCurrentProfile,
-  deleteAccount
+  getCurrentProfile
+  // deleteAccount
 } from "../../../_actions/profileActions";
 
 import Spinner from "../common/Spinner";
 import Persona from "../personas/Persona";
 
 class Home extends Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }

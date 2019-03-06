@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
+const path = require("path");
+// require multer
+const multer = require("multer");
 
 // Load Validation
 const validateProfileInput = require("../../validation/profile");
@@ -11,6 +14,33 @@ const Profile = require("../../model/Profile");
 
 // Load User Profile
 const User = require("../../model/User");
+
+// using middleware multer to upload photo on the server side
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, path.join(__dirname, "../uploads/"));
+  },
+  filename: function(req, file, cb) {
+    cb(null, new Date().toISOString().replace(/:/g, "-") + file.originalname);
+  }
+});
+
+const fileFilter = (req, file, cb) => {
+  // reject a file
+  if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
+    cb(null, true);
+  } else {
+    cb(null, false);
+  }
+};
+
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 1024 * 1024 * 5
+  },
+  fileFilter: fileFilter
+});
 
 // @route  GET api/posts/test
 // @desc   Tests post route
@@ -45,6 +75,7 @@ router.get(
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
+  upload.single("avatar"),
   (req, res) => {
     const { errors, isValid } = validateProfileInput(req.body);
 
@@ -58,8 +89,11 @@ router.post(
     const profileFields = {};
     profileFields.user = req.user.id;
     if (req.body.location) profileFields.location = req.body.location;
+
+    // post req to db
     if (req.body.avatar) profileFields.avatar = req.body.avatar;
 
+    // payment
     profileFields.paymentDetails = {};
     if (req.body.fullName)
       profileFields.paymentDetails.fullName = req.body.fullName;

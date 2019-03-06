@@ -2,7 +2,7 @@ import axios from "axios";
 
 import {
   GET_PROFILE,
-  GET_PROFILES,
+  // GET_PROFILES,
   PROFILE_LOADING,
   CLEAR_CURRENT_PROFILE,
   GET_ERRORS,

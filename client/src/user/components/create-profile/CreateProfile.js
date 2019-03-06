@@ -10,7 +10,7 @@ class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      avatar: "",
+      avatar: null,
       location: "",
       fullName: "",
       creditcardno: "",
@@ -38,6 +38,8 @@ class CreateProfile extends Component {
 
   onSubmit(e) {
     e.preventDefault();
+    console.log(this.state.location);
+    console.log(this.state.avatar);
 
     const profileData = {
       avatar: this.state.avatar,
@@ -54,6 +56,11 @@ class CreateProfile extends Component {
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
+  onChangeFile(e) {
+    this.setState({
+      [e.target.name]: e.target.files[0]
+    });
+  }
 
   render() {
     const { errors } = this.state;
@@ -68,7 +75,7 @@ class CreateProfile extends Component {
                 Let's get some information to make your profile
               </p>
               <small className="d-block pb-3">* = required fields</small>
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={this.onSubmit} encType="multipart/form-data">
                 <div className="form-row">
                   <div className="form-group col">
                     <input
@@ -86,13 +93,15 @@ class CreateProfile extends Component {
 
                 <div className="form-row">
                   <div className="form-group col">
+                    <label htmlfor="avatar">Upload your avatar</label>
                     <input
-                      className="form-control form-control-sm"
-                      type="text"
+                      className="form-control-file"
+                      type="file"
                       placeholder="Avatar"
                       name="avatar"
-                      value={this.state.avatar}
+                      // value={this.state.event.target.files[0]}
                       onChange={this.onChange}
+                      // disabled
                     />
                   </div>
                 </div>

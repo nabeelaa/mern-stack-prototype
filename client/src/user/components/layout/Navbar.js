@@ -22,6 +22,10 @@ class Navbar extends Component {
           {" "}
           Profile
         </Link>
+        <Link className="nav-link" to="/user/home">
+          {" "}
+          Dashboard
+        </Link>
         <li className="nav-item">
           <a href={this.href} onClick={this.onLogoutClick} className="nav-link">
             {" "}
@@ -33,6 +37,14 @@ class Navbar extends Component {
 
     const authLinksBrand = (
       <ul className="navbar-nav ml-auto">
+        <Link className="nav-link" to="/user/home">
+          {" "}
+          Campaigns
+        </Link>
+        <Link className="nav-link" to="/user/home">
+          {" "}
+          Reports
+        </Link>
         <li className="nav-item">
           <a href={this.href} onClick={this.onLogoutClick} className="nav-link">
             {" "}

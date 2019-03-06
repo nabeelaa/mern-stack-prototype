@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route
+  // Switch
+} from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./_utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./_actions/authActions";
@@ -21,7 +25,7 @@ import BrandRegister from "./brand/components/auth/BrandRegister";
 import BrandLogin from "./brand/components/auth/BrandLogin";
 import BrandHome from "./brand/components/brandHome/BrandHome";
 
-import PrivateRoute from "./user/components/common/PrivateRoute";
+// import PrivateRoute from "./user/components/common/PrivateRoute";
 
 import "./App.css";
 import CreateProfile from "./user/components/create-profile/CreateProfile";
