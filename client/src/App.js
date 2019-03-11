@@ -19,6 +19,7 @@ import Footer from "./user/components/layout/Footer";
 import Login from "./user/components/auth/Login";
 import Register from "./user/components/auth/Register";
 import Home from "./user/components/home/Home";
+import EditProfile from "./user/components/edit-profile/EditProfile";
 
 // import BrandLanding from "./brand/components/layout/BrandLanding";
 import BrandRegister from "./brand/components/auth/BrandRegister";
@@ -29,6 +30,7 @@ import BrandHome from "./brand/components/brandHome/BrandHome";
 
 import "./App.css";
 import CreateProfile from "./user/components/create-profile/CreateProfile";
+import PaymentHistory from "./user/components/payment/PaymentHistory";
 
 //Check for token
 if (localStorage.jwtToken) {
@@ -70,9 +72,10 @@ class App extends Component {
 
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-
             <Route path="/home" component={Home} />
             <Route path="/create-profile" component={CreateProfile} />
+            <Route path="/user/dashboard" component={EditProfile} />
+            <Route path="/user/payment-history" component={PaymentHistory} />
 
             {/* <Route path="/brands" component={BrandLanding} /> */}
             <Route path="/brands/register" component={BrandRegister} />

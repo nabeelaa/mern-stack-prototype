@@ -18,11 +18,11 @@ class Navbar extends Component {
 
     const authLinksUser = (
       <ul className="navbar-nav ml-auto">
-        <Link className="nav-link" to="/user/home">
+        <Link className="nav-link" to="/home">
           {" "}
-          Profile
+          Home
         </Link>
-        <Link className="nav-link" to="/user/home">
+        {/* <Link className="nav-link" to="/user/home">
           {" "}
           Dashboard
         </Link>
@@ -31,17 +31,48 @@ class Navbar extends Component {
             {" "}
             Logout
           </a>
+        </li> */}
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Settings{" "}
+          </a>
+          <div
+            className="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <Link className="dropdown-item" to="/user/dashboard">
+              Profile
+            </Link>
+            <Link className="dropdown-item" to="/user/payment-history">
+              Payment History
+            </Link>
+            <a
+              href={this.href}
+              onClick={this.onLogoutClick}
+              className="dropdown-item"
+            >
+              {" "}
+              Logout
+            </a>
+          </div>
         </li>
       </ul>
     );
 
     const authLinksBrand = (
       <ul className="navbar-nav ml-auto">
-        <Link className="nav-link" to="/user/home">
+        <Link className="nav-link" to="/">
           {" "}
           Campaigns
         </Link>
-        <Link className="nav-link" to="/user/home">
+        <Link className="nav-link" to="/">
           {" "}
           Reports
         </Link>

@@ -86,6 +86,7 @@ router.post("/login", (req, res) => {
           id: user.id,
           firstName: user.firstName,
           lastName: user.lastName,
+          email: user.email,
           avatar: user.avatar
         }; // Create JWT Pyload
 
