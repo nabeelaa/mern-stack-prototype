@@ -25,30 +25,34 @@ class PaymentHistory extends Component {
           <table class="table table table-striped">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Date</th>
+                <th scope="col">Reference</th>
+                <th scope="col">Brand </th>
+                <th scope="col">Time of Completion</th>
+                <th scope="col">Amount</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">1/26/2019</th>
+                <td>1231231231</td>
+                <td>Nike</td>
+                <td>1/26/2019</td>
+                <td>10$</td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <th scope="row">1/26/2019</th>
+                <td>1231231231</td>
+                <td>McDonalds</td>
+                <td>1/26/2019</td>
+                <td>7$</td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
+                <th scope="row">1/26/2019</th>
+                <td>1231231231</td>
+                <td>Starbucks</td>
+                <td>1/26/2019</td>
+                <td>5$</td>
               </tr>
             </tbody>
           </table>
