@@ -205,7 +205,7 @@ class EditProfile extends Component {
 
                 <div className="form-row">
                   <div className="form-group col">
-                    <label htmlFor="creditcardno">Credit Card No.</label>
+                    <label htmlFor="expiryDate">Expiry Date</label>
                     <input
                       className="form-control form-control-sm"
                       type="date"
